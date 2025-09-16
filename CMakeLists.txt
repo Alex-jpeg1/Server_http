@@ -10,5 +10,5 @@ add_executable(Server src/main.cpp)
 
 target_include_directories(Server PUBLIC ${INCLUDE_PATHS})
 
-target_compile_definitions(Server PUBLIC CROW_USE_BOOST)
+target_link_libraries(Server PRIVATE pthread)
 

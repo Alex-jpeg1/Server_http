@@ -5,9 +5,12 @@ int main()
 {	 
 	crow::SimpleApp app;
 
+	crow::mustache::set_base("../frontend");
 	CROW_ROUTE(app,"/")([]()
 	{ 
-	return "Hello world";
+	auto page = crow::mustache::load_text("mainpage.html");
+	
+	return page;
 	});
 
 	app.bindaddr("127.0.0.1").port(18080).multithreaded().run();

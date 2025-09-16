@@ -1764,6 +1764,43 @@ CMakeFiles/Server.dir/src/main.cpp.o: /home/Alex/server_cpp/src/main.cpp \
   /usr/include/xlocale/_time.h \
   /usr/include/xlocale/_wchar.h
 
+Server: /lib/libc++.so.1 \
+  /lib/libc.so.7 \
+  /usr/lib/crt1.o \
+  /usr/lib/crtbegin.o \
+  /usr/lib/crtend.o \
+  /usr/lib/crti.o \
+  /usr/lib/crtn.o \
+  /usr/lib/libc++.so \
+  /usr/lib/libc.so \
+  /usr/lib/libc_nonshared.a \
+  /usr/lib/libcxxrt.so \
+  /usr/lib/libgcc.a \
+  /usr/lib/libgcc_s.so \
+  /usr/lib/libm.so \
+  /usr/lib/libpthread.so \
+  CMakeFiles/Server.dir/src/main.cpp.o
+
+
+/usr/lib/libpthread.so:
+
+/usr/lib/libm.so:
+
+/usr/lib/libgcc.a:
+
+/usr/lib/libc_nonshared.a:
+
+/usr/lib/libc++.so:
+
+/usr/lib/crti.o:
+
+/usr/lib/crtend.o:
+
+/usr/lib/crtbegin.o:
+
+/usr/lib/crt1.o:
+
+/lib/libc.so.7:
 
 /usr/include/xlocale/_time.h:
 
@@ -3165,6 +3202,8 @@ CMakeFiles/Server.dir/src/main.cpp.o: /home/Alex/server_cpp/src/main.cpp \
 
 /usr/include/c++/v1/__memory/allocator_arg_t.h:
 
+/usr/lib/libcxxrt.so:
+
 /home/Alex/server_cpp/boost_1_81_0/boost/smart_ptr/detail/local_sp_deleter.hpp:
 
 /usr/include/c++/v1/__algorithm/fill.h:
@@ -3196,6 +3235,8 @@ CMakeFiles/Server.dir/src/main.cpp.o: /home/Alex/server_cpp/src/main.cpp \
 /home/Alex/server_cpp/boost_1_81_0/boost/preprocessor/variadic/elem.hpp:
 
 /usr/include/c++/v1/__tuple/ignore.h:
+
+/usr/lib/libgcc_s.so:
 
 /home/Alex/server_cpp/boost_1_81_0/boost/preprocessor/tuple/elem.hpp:
 
@@ -3538,6 +3579,8 @@ CMakeFiles/Server.dir/src/main.cpp.o: /home/Alex/server_cpp/src/main.cpp \
 /home/Alex/server_cpp/boost_1_81_0/boost/predef/compiler/compaq.h:
 
 /usr/include/c++/v1/__system_error/error_category.h:
+
+CMakeFiles/Server.dir/src/main.cpp.o:
 
 /home/Alex/server_cpp/boost_1_81_0/boost/predef/compiler/comeau.h:
 
@@ -4513,6 +4556,8 @@ CMakeFiles/Server.dir/src/main.cpp.o: /home/Alex/server_cpp/src/main.cpp \
 
 /home/Alex/server_cpp/boost_1_81_0/boost/mpl/aux_/config/use_preprocessed.hpp:
 
+/usr/lib/libc.so:
+
 /usr/include/c++/v1/__algorithm/count_if.h:
 
 /home/Alex/server_cpp/boost_1_81_0/boost/asio/impl/connect_pipe.ipp:
@@ -4909,7 +4954,11 @@ CMakeFiles/Server.dir/src/main.cpp.o: /home/Alex/server_cpp/src/main.cpp \
 
 /home/Alex/server_cpp/boost_1_81_0/boost/asio/execution/relationship.hpp:
 
+/lib/libc++.so.1:
+
 /home/Alex/server_cpp/boost_1_81_0/boost/mpl/void.hpp:
+
+/usr/lib/crtn.o:
 
 /home/Alex/server_cpp/boost_1_81_0/boost/predef/architecture/riscv.h:
 
