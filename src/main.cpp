@@ -12,10 +12,10 @@ int main()
     auto currDir = fs::current_path();
     crow::mustache::set_base(currDir.string());
 
-    CROW_ROUTE(app, "/<string>")([](std::string nume) {
-        auto page  = crow::mustache::load("mainpage.html");
-        crow::mustache::context ctx({{"name",nume}});
-        return page.render(ctx);
+    CROW_ROUTE(app, "/").methods(crow::HTTPMethod::GET)([]() {
+    	auto page = crow::mustache::load("mainpage.html");
+    	
+    	return page.render();
     });
 
     app.bindaddr("127.0.0.1").port(18080).multithreaded().run();
