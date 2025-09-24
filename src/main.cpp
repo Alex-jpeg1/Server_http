@@ -5,24 +5,38 @@
 #include <string>
 namespace fs = std::filesystem;
 
-int main()
+struct LoggerMiddleware{
+
+struct context{};
+
+void before_handler(crow::request& req, crow::response& context&)
 {
-    crow::SimpleApp app;
-    
-    auto currDir = fs::current_path();
-    crow::mustache::set_base(currDir.string());
+	std::cout<<req.url;
+}
 
-    CROW_ROUTE(app, "/").methods(crow::HTTPMethod::GET)([]() {
-    	auto page = crow::mustache::load("index.html");    	
-    	return page.render();
-    });
+}
 
-    CROW_ROUTE(app, "/static/<string>")
-    .methods(crow::HTTPMethod::GET)([](std::string filename)
-    {
-    	std :: string completePath = "/src/" + filename;
-    	auto response = crow::mustache::load(completePath);
-    	return response.render();
-    });    
-    app.bindaddr("127.0.0.1").port(18080).multithreaded().run();
+class Server{
+ public:
+	Server(int RunningPort = 18080, std::string addr = "127.0.0.1"):
+	Port(RunningPort), 
+	ip(addr)
+	{}
+
+	void run ()
+	{
+		app.bindaddr(ip).port(Port).multithreaded().run();			
+	}
+	
+ private:
+	int Port;
+	std::string ip;
+ 	crow::App<LoggerMiddleware> app;
+} 
+
+int main()
+{   
+	Server server;
+	
+	server.run();	
 }
