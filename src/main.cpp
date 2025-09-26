@@ -32,13 +32,13 @@ class Server{
 		
 		app.route_dynamic("/").methods(crow::HTTPMethod::GET)([]()
 		{
-			auto page =crow::mustache::load("index.html");
+			auto page =crow::mustache::load("/dist/index.html");
 			return page.render(); 
 		});
 
-		app.route_dynamic("/static/assets/<string>").methods(crow::HTTPMethod::GET)([&currDir](std::string filename)
+		app.route_dynamic("/assets/<string>").methods(crow::HTTPMethod::GET)([&currDir](std::string filename)
 		{
-			std :: string completePath = currDir.string() + "/templates/" + filename;
+			std :: string completePath = currDir.string() + "/templates/dist/static/assets" + filename;
 			auto response = crow::mustache::load(completePath);
 			return response.render();
 		});
