@@ -36,7 +36,7 @@ class Server{
 			return page.render(); 
 		});
 
-		app.route_dynamic("/static/<string>").methods(crow::HTTPMethod::GET)([&currDir](std::string filename)
+		app.route_dynamic("/static/assets/<string>").methods(crow::HTTPMethod::GET)([&currDir](std::string filename)
 		{
 			std :: string completePath = currDir.string() + "/templates/" + filename;
 			auto response = crow::mustache::load(completePath);
@@ -51,8 +51,6 @@ class Server{
 			std::string pass = body.get("pass") ? body.get("pass") : "";
 
 			// Check if the user is trying to indentify correctly
-
-			
 			if(user.size() ==  0)
 			{
 				return crow::response(401, "Username must be an array");
@@ -66,7 +64,8 @@ class Server{
 			return crow::response(200, "Action succesful");			
 		});
 	}
-	
+
+		
 	void Run()
 	{
 		setupRoutes();
