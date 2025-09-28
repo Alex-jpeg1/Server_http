@@ -5,6 +5,8 @@
 #include <string>
 namespace fs = std::filesystem;
 
+using std::cout;
+
 struct LoggerMiddleware{
 
 struct context{};
@@ -28,7 +30,9 @@ class Server{
 	void setupRoutes()
 	{
 		auto currDir = fs::current_path();
-		crow::mustache::set_base(currDir.string());
+		cout<<currDir.string();
+		
+		crow::mustache::set_base(currDir.string() + "/templates/dist/");
 		
 		app.route_dynamic("/").methods(crow::HTTPMethod::GET)([]()
 		{
